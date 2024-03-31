@@ -23,9 +23,9 @@ const Inventory = () => {
     const fetchData = async () => {
       try {
         const [inventoryResponse, categoryResponse, supplierResponse] = await Promise.all([
-          axios.get('http://localhost:3000/inventory'),
-          axios.get('http://localhost:3000/categories'),
-          axios.get('http://localhost:3000/suppliers'),
+          axios.get('https://nvmt-smart-vercel-deployment.vercel.app//inventory'),
+          axios.get('https://nvmt-smart-vercel-deployment.vercel.app//categories'),
+          axios.get('https://nvmt-smart-vercel-deployment.vercel.app//suppliers'),
         ]);
         setInventoryItems(inventoryResponse.data);
         setCategories(categoryResponse.data);
